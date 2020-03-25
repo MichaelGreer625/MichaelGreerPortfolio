@@ -1,0 +1,93 @@
+/userspace/m/mgreer2/Desktop/Project_Modules/xyLocation.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/xyLocation.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module xyLocation
+
+Top level modules:
+	xyLocation
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/sqrt32.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/sqrt32.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module sqrt32
+
+Top level modules:
+	sqrt32
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/sqrt32.svh {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/sqrt32.svh
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module sqrt32_DW01_ash_0
+-- Compiling module sqrt32_DW01_ash_1
+-- Compiling module sqrt32_DW01_add_1
+-- Compiling module sqrt32_DW01_add_0
+-- Compiling module sqrt322
+
+Top level modules:
+	sqrt322
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/doMathTB.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/doMathTB.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module doMathTB
+
+Top level modules:
+	doMathTB
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/getCycles.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/getCycles.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module getCycles
+
+Top level modules:
+	getCycles
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/doMathScripted.svh {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/doMathScripted.svh
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module doMath_DW01_sub_0
+-- Compiling module doMath_DW01_sub_1
+-- Compiling module doMath_DW02_mult_0
+-- Compiling module doMath_DW02_mult_1
+-- Compiling module doMath_DW_div_tc_0
+-- Compiling module doMath_DW01_sub_2
+-- Compiling module doMath_DW02_mult_2
+-- Compiling module doMath_DW01_add_3
+-- Compiling module doMath_DW02_mult_3
+-- Compiling module doMath_DW_div_tc_1
+-- Compiling module doMath_DW_div_tc_2
+-- Compiling module doMathdd
+
+Top level modules:
+	doMathdd
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/xyLocationTB.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/xyLocationTB.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module xyLocationTB
+
+Top level modules:
+	xyLocationTB
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/sqrt32TB.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/sqrt32TB.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module sqrt32TB
+
+Top level modules:
+	sqrt32TB
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/testDoMath.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/testDoMath.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module testDoMath
+
+Top level modules:
+	testDoMath
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/doMath.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/doMath.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module doMath
+
+Top level modules:
+	doMath
+
+} {} {}} /userspace/m/mgreer2/Desktop/Project_Modules/getCyclesTB.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/m/mgreer2/Desktop/Project_Modules/getCyclesTB.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module getCyclesTB
+
+Top level modules:
+	getCyclesTB
+
+} {} {}}

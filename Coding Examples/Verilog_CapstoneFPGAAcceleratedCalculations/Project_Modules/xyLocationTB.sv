@@ -1,0 +1,94 @@
+`timescale 1 ns / 1 ps
+
+
+module xyLocationTB;
+
+   reg clk, rst;
+   //reg [31:0] theCount1, theCount2;
+
+   wire complete;
+   reg trippedone, trippedtwo;
+   wire [31:0] blah;
+   wire [31:0] dummy;
+xyLocation bringit(
+  // signals to connect to an Avalon clock source interface
+  .clk(clk),
+  .reset(rst),
+  // signals to connect to an Avalon-MM slave interface
+  .slave_address(5'b00000),
+  .slave_read(1'b0),
+  .slave_write(1'b0),
+  .slave_readdata(blah),
+  .slave_writedata(32'h00000000),
+  .slave_byteenable(4'b0000),
+  // Non-Avalon Interface IO
+  .gpio_inputs(32'h00000000),
+  .gpio_outputs(dummy),
+  
+
+  .tripone(trippedone),
+  .triptwo(trippedtwo)
+);
+
+   always #1 clk = ~clk;
+
+
+
+   //always @(posedge complete) begin
+      //$display("Count11, Count22 (%d, %d)", doit.theCount11, doit.theCount22);
+
+
+
+    //  $finish;
+   //end
+
+
+
+   initial begin
+      clk = 0;
+      rst = 0;
+	trippedone = 0;
+	trippedtwo = 0;
+      //$monitor($time,,"X, Y = %d, %d", doit.Xreg, doit.beforeSQRReg);
+      @(posedge clk);
+	rst = 1;
+	@(posedge clk);
+	rst = 0;
+ 
+
+	#125177
+        trippedone = 1;
+	
+	trippedtwo = 1;
+	@(posedge clk);
+        trippedone = 0;
+	
+	trippedtwo = 0;
+	#125177
+
+
+        trippedone = 1;
+	
+	trippedtwo = 1;
+	@(posedge clk);
+        trippedone = 0;
+	
+	trippedtwo = 0;
+	#125177
+        trippedone = 1;
+	
+	trippedtwo = 1;
+	@(posedge clk);
+        trippedone = 0;
+	
+	trippedtwo = 0;
+	#125177
+        trippedone = 1;
+	
+	trippedtwo = 1;
+	@(posedge clk);
+        trippedone = 0;
+	
+	trippedtwo = 0;
+   end
+endmodule

@@ -1,0 +1,283 @@
+
+
+/*
+
+  Author:  Joe Krachey
+  Date:  07/12/2018
+
+*/
+
+
+module xyLocation(
+  // signals to connect to an Avalon clock source interface
+  clk,
+  reset,
+  // signals to connect to an Avalon-MM slave interface
+  slave_address,
+  slave_read,
+  slave_write,
+  slave_readdata,
+  slave_writedata,
+  slave_byteenable,
+  // Non-Avalon Interface IO
+  gpio_inputs,
+  gpio_outputs,
+  
+
+  tripone,
+  triptwo
+);
+
+  //*******************************************************************
+  // Module Interface
+  //*******************************************************************
+  input clk;
+  input reset;
+  
+  // slave interface
+  input [4:0] slave_address;
+  input slave_read;
+  input slave_write;
+  output wire [31:0] slave_readdata;
+  input [31:0] slave_writedata;
+  input [3:0] slave_byteenable;
+
+
+  input [31:0] gpio_inputs;
+  output [31:0] gpio_outputs;
+
+  input tripone, triptwo;
+
+  //*******************************************************************
+  // Register Addresses
+  //*******************************************************************
+  localparam	DEV_ID_ADDR	  = 5'b0000;
+  localparam	X_ADDR	= 5'b0001;
+  localparam	Y_ADDR	= 5'b0010;
+  localparam	GPIO_IN_ADDR	  = 5'b0011;
+  localparam	GPIO_OUT_ADDR	= 5'b0100;
+
+  
+  //*******************************************************************
+  // Register Set
+  //*******************************************************************
+  reg  [31:0] dev_id_r;
+  reg  [31:0] gpio_in_r;
+  reg  [31:0] gpio_out_r;
+  reg  [31:0] x_r;
+  reg  [31:0] y_r;
+  
+ 
+  wire isComplete;
+
+
+
+  
+   //*******************************************************************
+  // Wires/Reg
+  //*******************************************************************
+  wire  [31:0] gpio_in;
+  wire  [31:0] gpio_out;
+  wire  [31:0] x;
+  wire  [15:0] y;
+  //*******************************************************************
+  // Register Read Assignments
+  //*******************************************************************
+  assign slave_readdata = 
+        ( (slave_address == DEV_ID_ADDR )    && slave_read )  ? dev_id_r :
+        ( (slave_address == X_ADDR )   && slave_read )  ? x_r :
+        ( (slave_address == Y_ADDR )  && slave_read )  ? y_r : 
+	( (slave_address == GPIO_IN_ADDR )    && slave_read )  ? gpio_in_r :
+        ( (slave_address == GPIO_OUT_ADDR )   && slave_read )  ? gpio_out_r :  32'h00000000 ;
+  //*******************************************************************
+  // Output Assignments
+  //*******************************************************************
+ // Output signals to external devices.
+  assign gpio_outputs = {gpio_out_r[31:0]};
+ // Input signals for registers
+  //assign gpio_out       = { STEP,control_r[3],control_r[2],control_r[1],control_r[0], 6'b111111, ~hex2[6:0], ~hex1[6:0], ~hex0[6:0]};
+  //assign gpio_in        = ( (slave_address == GPIO_IN_ADDR )   && slave_write ) ? slave_writedata : gpio_in_r;
+    assign gpio_out       = 0;
+    assign gpio_in        = 0;  
+  
+  
+ // assign x        = ( (slave_address == X_ADDR )   && slave_write ) ? slave_writedata : x_r;
+//  assign y        = ( (slave_address == Y_ADDR )   && slave_write ) ? slave_writedata : y_r;
+
+
+doMath yah(
+.CLK(clk),
+.RST(reset),
+
+.trippedone(tripone), //change these to the right pins
+.trippedtwo(triptwo), //change these to the right pins
+
+
+.startSequence(1'b1),
+//just make sure this start bit goes down when you want to start the sequence. 
+
+
+
+
+.complete(isComplete),
+
+.X(x),
+.Y(y)
+);
+
+ 
+
+
+
+ //this is how long we want the 40 hk single to last;
+reg [10:0] count2;
+reg toggle;
+reg freq;
+always @(posedge freq or posedge isComplete or posedge reset) begin
+	if(reset)begin
+		toggle <= 1;
+		count2 <= 0;
+	end else if(isComplete)begin
+		toggle <= 1;
+		count2 <= 0;
+	end else if (count2 == 2)begin
+		toggle <= 0;
+		count2 <= 0;
+	end else begin
+		toggle <= toggle;
+		count2 <= count2 + 1;
+	end
+
+
+end
+
+
+
+ //Create a 40kh single for the transmit. use toggle to start the sequence
+reg [10:0] count;
+
+always @(posedge clk or posedge reset negedge toggle) begin
+	if(reset)begin
+		count <= 0;
+		freq <= 0;
+	end else if(~toggle)begin
+		count <= 0;
+		freq <= 0;
+	end else if (count == 1250)begin
+		count <= 0;
+		freq = ~freq;
+
+	end else begin
+		count <= count + 1;
+		freq <= freq;
+	end
+
+
+end
+ 
+  
+
+  
+  
+  
+  
+  
+  
+  //*******************************************************************
+  // Pos edge detector.
+  //*******************************************************************
+  
+  /*
+  reg remember;
+  
+  always @ (posedge clk or posedge reset) begin
+	if (reset)
+		remember <= 1;
+	else
+      remember <= STEP;
+  end
+  
+
+  reg [31:0] remember2;
+    always @ (posedge clk or posedge reset) begin
+	if (reset)
+		remember2 <= 0;
+	else if (im_r == 0)
+		remember2 <= 0;
+	else begin
+      		remember2 <= step_count_r;
+	end
+
+  end
+  
+  wire stepposedge;
+
+  assign stepposedge = ~remember & STEP;
+  
+  
+
+  //*******************************************************************
+  // State/Nextstate flops and entire state machine
+  //*******************************************************************
+  
+  
+localparam IDLE = 0, DECCOUNTER = 1;
+reg state, nextstate;
+  
+  always @(posedge clk or posedge reset) begin
+  
+	if(reset)
+		state <= IDLE;
+	else
+		state <= nextstate;
+		
+  end
+always @(*) begin
+	nextstate = IDLE; // Default next state: stay where we are
+	                                                     
+	case (state)
+		IDLE : begin
+
+		end
+		
+		DECCOUNTER : begin
+	
+		
+		end
+	endcase
+end 
+  
+  */
+  
+    //*******************************************************************
+  // Registers
+  //*******************************************************************
+ 
+  
+  always @(posedge clk or posedge reset)
+  begin
+    if (reset == 1)begin
+      dev_id_r    <= 32'hECE45318;
+      gpio_in_r   <= 32'h00000000;
+      gpio_out_r  <= 32'h00000000;
+      x_r  <= 32'h00000000;
+	y_r    <= 32'h00000000;
+		
+    end
+    
+    else begin
+      dev_id_r    <= 32'hECE45318;
+      gpio_in_r   <= gpio_in;
+      gpio_out_r  <= gpio_out;
+	if(isComplete)begin
+     		 x_r  <= x;
+		y_r    <= y;
+	end else begin 
+     		 x_r  <= x_r;
+		y_r    <= y_r;
+	end
+    end
+  end
+
+
+endmodule

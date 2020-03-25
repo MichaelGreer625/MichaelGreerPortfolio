@@ -1,0 +1,152 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Michael Greer, UW Madison, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.24.1
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Michael\Documents\finalProject\finalProj\HW3.uvprojx
+Project File Date:  12/10/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'HW3'
+compiling tic_tac_toe_images.c...
+compiling interrupts.c...
+compiling main.c...
+main.c(83): warning:  #177-D: variable "game_status"  was declared but never referenced
+    TTT_GAME_STATUS_t game_status = ONGOING;
+main.c(87): warning:  #177-D: variable "data"  was declared but never referenced
+  	uint32_t data = 0;
+main.c(90): warning:  #177-D: variable "ispressed"  was declared but never referenced
+  	bool ispressed;
+main.c(93): warning:  #177-D: variable "i"  was declared but never referenced
+    int i = 0;
+main.c(94): warning:  #177-D: variable "validate"  was declared but never referenced
+    bool validate;
+main.c(95): warning:  #177-D: variable "mainscreenx"  was declared but never referenced
+  	int mainscreenx, mainscreeny;
+main.c(95): warning:  #177-D: variable "mainscreeny"  was declared but never referenced
+  	int mainscreenx, mainscreeny;
+main.c(353): warning:  #1-D: last line of file ends without a newline
+  */
+main.c: 8 warnings, 0 errors
+compiling tic_tac_toe.c...
+tic_tac_toe.c(67): warning:  #550-D: variable "gpioPort"  was set but never used
+  	GPIOA_Type  *gpioPort;
+tic_tac_toe.c(373): warning:  #940-D: missing return statement at end of non-void function "tic_tac_toe_check_for_win" 
+  }
+tic_tac_toe.c(477): warning:  #177-D: variable "countttt"  was declared but never referenced
+  	static int countttt = 1;
+tic_tac_toe.c(565): warning:  #177-D: variable "touchPoints"  was declared but never referenced
+  	uint8_t touchPoints;
+tic_tac_toe.c: 4 warnings, 0 errors
+compiling adc.c...
+..\drivers\c\adc.c(212): warning:  #1-D: last line of file ends without a newline
+  }
+..\drivers\c\adc.c: 1 warning, 0 errors
+compiling gpio_port.c...
+..\drivers\c\gpio_port.c(83): warning:  #188-D: enumerated type mixed with another type
+         return 0;
+..\drivers\c\gpio_port.c(426): warning:  #177-D: variable "restorePins"  was declared but never referenced
+  	uint8_t restorePins;
+..\drivers\c\gpio_port.c: 2 warnings, 0 errors
+compiling timers.c...
+compiling pc_buffer.c...
+compiling i2c.c...
+compiling changecodefile.c...
+changecodefile.c(73): warning:  #1-D: last line of file ends without a newline
+  */
+changecodefile.c: 1 warning, 0 errors
+compiling spi.c...
+compiling uart.c...
+..\drivers\c\uart.c(184): warning:  #188-D: enumerated type mixed with another type
+         return 0;
+..\drivers\c\uart.c: 1 warning, 0 errors
+compiling launchpad_io.c...
+compiling ece353_images.c...
+compiling ps2.c...
+compiling lcd.c...
+..\peripherals\c\lcd.c(504): warning:  #177-D: variable "j"  was declared but never referenced
+  	int i, j;
+..\peripherals\c\lcd.c: 1 warning, 0 errors
+compiling lcd_images.c...
+compiling eeprom.c...
+..\peripherals\c\eeprom.c(137): warning:  #550-D: variable "status"  was set but never used
+    i2c_status_t status;
+..\peripherals\c\eeprom.c: 1 warning, 0 errors
+compiling ft6x06.c...
+compiling serial_debug.c...
+..\peripherals\c\serial_debug.c(177): warning:  #177-D: variable "uart_base"  was declared but never referenced
+     uint32_t uart_base;
+..\peripherals\c\serial_debug.c(178): warning:  #177-D: variable "tx_buffer"  was declared but never referenced
+     PC_Buffer *tx_buffer;
+..\peripherals\c\serial_debug.c: 2 warnings, 0 errors
+assembling ws2812b.s...
+compiling spi_select.c...
+assembling startup_TM4C123.s...
+compiling wireless.c...
+compiling io_expander.c...
+io_expander.c(10): warning:  #940-D: missing return statement at end of non-void function "io_expander_init" 
+  }
+io_expander.c(17): warning:  #550-D: variable "status"  was set but never used
+  	 i2c_status_t status;
+io_expander.c(82): warning:  #940-D: missing return statement at end of non-void function "io_expander_read_reg" 
+  	}
+io_expander.c(44): warning:  #550-D: variable "status"  was set but never used
+  		 i2c_status_t status;
+io_expander.c(102): warning:  #1-D: last line of file ends without a newline
+  }
+io_expander.c: 5 warnings, 0 errors
+compiling system_TM4C123.c...
+linking...
+Program Size: Code=13756 RO-data=2852 RW-data=164 ZI-data=4172  
+".\obj\ece353_base_project.axf" - 0 Error(s), 26 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM.CMSIS.5.0.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_HW3
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device\Source\system_TM4C123.c
+      Include file:  Device\Include\TM4C123\TM4C123.h
+      Source file:   Device\Source\ARM\startup_TM4C123.s
+
+   * Component: ARM::CMSIS:CORE:5.0.1
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

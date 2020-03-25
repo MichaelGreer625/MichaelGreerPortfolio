@@ -1,0 +1,81 @@
+
+module getCyclesTB;
+
+   reg clk, rst;
+   reg startSequence;
+   reg trippedone, trippedtwo;
+   wire hasTripped;
+   wire [31:0] theCount1, theCount2;   
+	
+
+
+   reg [12:0] toshift;
+   reg [9:0] toPut;
+
+   reg [12:0] toshift2;
+   reg [9:0] toPut2;
+
+getCycles getem(
+.CLK(clk),
+.RST(rst),
+
+.trippedone(trippedone),
+.trippedtwo(trippedtwo),
+.startSequence(startSequence),
+//just make sure this start bit goes down when you want to start the sequence. 
+
+
+.hasTripped(hasTripped),
+
+.theCount1(theCount1),
+.theCount2(theCount2)
+);
+
+   always #1 clk = ~clk;
+	
+
+
+
+
+
+
+   always @(posedge hasTripped) begin
+      $display("Count1, Count 2 --> %d, %d)", theCount1, theCount2);
+      $finish;
+   end
+
+
+   initial begin
+      clk = 0;
+      rst = 0;
+	trippedone = 0;
+	trippedtwo = 0;
+	startSequence = 0;
+      //$monitor($time,,"X, Y = %d, %d", doit.Xreg, doit.beforeSQRReg);
+      @(posedge clk);
+	rst = 1;
+	@(posedge clk);
+	rst = 0;
+ 
+	@(posedge clk);
+	startSequence = 1;
+	@(posedge clk);
+	startSequence = 0;
+        trippedone = 1;
+	#50000
+	trippedtwo = 1;
+
+
+   end
+endmodule
+
+/*
+	@(posedge HasTrippedtho.ADC_CS);
+	toPut = 300;
+
+	@(posedge HasTrippedtho.ADC_CS);
+	toPut = 400;
+
+	@(posedge HasTrippedtho.ADC_CS);
+	toPut = 500;
+*/
