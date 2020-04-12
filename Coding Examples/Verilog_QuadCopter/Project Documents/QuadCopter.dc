@@ -1,0 +1,76 @@
+read_file -format sverilog {UART_tx.sv UART_rcv.sv UART.v UART_wrapper.sv ESC_interface.sv \
+                            ESCs.sv reset_synch.sv flght_cntrl.sv cmd_cfg.sv inertial_integrator.sv \
+                            inert_intf.sv SPI_mstr16.sv A2D_intf.sv QuadCopter.v}
+
+###################################
+# Set Current Design to top level #
+###################################
+current_design QuadCopter
+
+link
+
+###########################################
+# Define clock and set don't mess with it #
+###########################################
+create_clock -name "clk" -period 2.5 -waveform { 0 1 }  { clk  }
+set_dont_touch_network [find port clk]
+
+# setup pointer that contains all inputs except clock #
+set prim_inputs [remove_from_collection [all_input] [find port clk]]
+
+
+###########################################
+# Define clock and set don't mess with it #
+###########################################
+set_clock_uncertainty 0.15 [get_clocks CLK]
+
+#########################################
+# Set input delay & drive on all inputs #
+#########################################
+set_input_delay -clock clk 0.25 $prim_inputs 
+set_driving_cell -lib_cell ND2D2BWP -library tcbn40lpbwptc [copy_collection $prim_inputs]
+
+
+############################################################
+# Set max transition time is important for Hot-E reasons #
+######################################################
+set_max_transition 0.1 [current_design]
+
+##########################################
+# Set output delay & load on all outputs #
+##########################################
+set_output_delay -clock clk 0.5 [all_outputs]
+set_load 0.1 [all_outputs]
+
+
+#############################################################
+# Wire load model allows it to estimate internal parasitics #
+#############################################################
+set_wire_load_model -name TSMC32K_Lowk_Conservative -library tcbn40lpbwptc 
+
+########################################
+# Now actually synthesize for 1st time #
+########################################
+compile -map_effort medium
+
+check_design
+## design ware components cause extra pins
+
+## smash the hierarchy (design ware component)
+ungroup -all -flatten
+
+##########################################
+# This fix the hold times #
+##########################################
+set_fix_hold clk
+
+
+compile -map_effort high
+# compile -incremental_method -only_hold_time
+
+check_design
+
+write -format verilog QuadCopter -output QuadCopter.vg
+
+report_area
+

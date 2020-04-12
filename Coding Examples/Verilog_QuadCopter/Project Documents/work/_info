@@ -1,0 +1,515 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/userspace/m/mgreer2/ECE551/TheFinalProject
+T_opt
+!s110 1513211151
+V_2i4?X?VzJXd^e?RWQ7zE3
+04 13 4 work QuadCopter_tb fast 0
+=1-000ae431a4f1-5a31c50e-48c86-762f
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6a;65
+R0
+vA2D_intf
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 I7nc0bAAP8P:cnfPi^9I`1
+IzW7J6UJ<9JLCESek5QnR<0
+!s105 A2D_intf_sv_unit
+S1
+Z4 d/userspace/m/mgreer2/ECE551/FinalFinalProject
+Z5 w1513200968
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/A2D_intf.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/A2D_intf.sv
+L0 1
+Z6 OL;L;10.6a;65
+Z7 !s108 1513209239.000000
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/A2D_intf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/A2D_intf.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@a2@d_intf
+vADC128S
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 0damBXUWz_8:HCk]^=0]c2
+IBMj2BY6D<2jdMX@ZThV1V2
+!s105 ADC128S_sv_unit
+S1
+R4
+R5
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/ADC128S.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/ADC128S.sv
+L0 1
+R6
+R7
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/ADC128S.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/ADC128S.sv|
+!i113 0
+R8
+R1
+n@a@d@c128@s
+vcmd_cfg
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 nni1lio<aSDo@ZR`Ko9cR2
+Im@nYOH7;OBgcGJoVkTX=e2
+!s105 cmd_cfg_sv_unit
+S1
+R4
+R5
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/cmd_cfg.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/cmd_cfg.sv
+L0 1
+R6
+R7
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/cmd_cfg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/cmd_cfg.sv|
+!i113 0
+R8
+R1
+vCommMaster
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 hgk6JCCMUUKb1`T<cm1S_2
+InoLcS3:94D7FP[Ab?2Pcm3
+!s105 CommMaster_sv_unit
+S1
+R4
+R5
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/CommMaster.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/CommMaster.sv
+L0 1
+R6
+R7
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/CommMaster.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/CommMaster.sv|
+!i113 0
+R8
+R1
+n@comm@master
+vCycloneIV
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 5ZBL4X29l@^:IClV3OcGX0
+IXZ2289A`7:VICfC3LKUM^0
+!s105 CycloneIV_sv_unit
+S1
+R4
+R5
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/CycloneIV.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/CycloneIV.sv
+L0 1
+R6
+R7
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/CycloneIV.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/CycloneIV.sv|
+!i113 0
+R8
+R1
+n@cyclone@i@v
+vESC_interface
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 Nm=ZNQg33]>L:1:8A6XKc3
+I]4ZgSVoe8YJf@D015?VY81
+!s105 ESC_interface_sv_unit
+S1
+R4
+R5
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/ESC_interface.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/ESC_interface.sv
+L0 1
+R6
+R7
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/ESC_interface.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/ESC_interface.sv|
+!i113 0
+R8
+R1
+n@e@s@c_interface
+vESCs
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 L67J_H>GB;HT`0K^@TfoJ2
+Inh`O3f[:aR`JMVnRToZVK2
+!s105 ESCs_sv_unit
+S1
+R4
+R5
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/ESCs.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/ESCs.sv
+L0 1
+R6
+R7
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/ESCs.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/ESCs.sv|
+!i113 0
+R8
+R1
+n@e@s@cs
+vflght_cntrl
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 cRh^lO:mi=ckXPnE>5bc>3
+I>S@1bZdecSUS;]3W_anbF2
+!s105 flght_cntrl_sv_unit
+S1
+R4
+R5
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/flght_cntrl.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/flght_cntrl.sv
+L0 1
+R6
+Z9 !s108 1513209240.000000
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/flght_cntrl.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/flght_cntrl.sv|
+!i113 0
+R8
+R1
+vinert_intf
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 0Nk<_^9=6CFEm<_WooP982
+I@MKkIfTP97H2]lVGS7`_J0
+!s105 inert_intf_sv_unit
+S1
+R4
+R5
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/inert_intf.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/inert_intf.sv
+L0 1
+R6
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/inert_intf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/inert_intf.sv|
+!i113 0
+R8
+R1
+vinertial_integrator
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 SDZFWkd237bLkOa3C395J0
+ILzCn`8NREgX6P4OiiRJeC2
+!s105 inertial_integrator_sv_unit
+S1
+R4
+R5
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/inertial_integrator.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/inertial_integrator.sv
+L0 1
+R6
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/inertial_integrator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/inertial_integrator.sv|
+!i113 0
+R8
+R1
+vQuadCopter
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 A[N87;G3^OhE<NERJ0i[j2
+IgU]K13Zf8;e@[EDczZM<M1
+R4
+w1513200972
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter.v
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter.v
+L0 1
+R6
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@quad@copter
+vQuadCopter_tb
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 Ezi_OPKYT?eKb:0Y5bGnG0
+I63465T@90KLc`L_ZR82_D1
+!s105 QuadCopter_tb_sv_unit
+S1
+R4
+Z11 w1513200974
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb.sv
+L0 1
+R6
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb.sv|
+!i113 0
+R8
+R1
+n@quad@copter_tb
+vQuadCopter_tb2
+R2
+Z12 !s110 1513209240
+!i10b 1
+!s100 Q6gcSIVW437XDZ6R8_LQS0
+IP[DLAOb8ic[z2WR8X>MmO0
+R3
+!s105 QuadCopter_tb2_sv_unit
+S1
+R4
+R11
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb2.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb2.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb2.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb2.sv|
+!i113 0
+R8
+R1
+n@quad@copter_tb2
+vQuadCopter_tb3
+R2
+R12
+!i10b 1
+!s100 =:JM?]4b]4?zSB15;7R6>0
+ImU9kWXScVznT9o:Z_dVMX2
+R3
+!s105 QuadCopter_tb3_sv_unit
+S1
+R4
+R11
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb3.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb3.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb3.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/QuadCopter_tb3.sv|
+!i113 0
+R8
+R1
+n@quad@copter_tb3
+vreset_synch
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 FXEY:ULjhjk4EK0@S7DQ90
+Ih8LRebT9jEZjH;J:c@<jY3
+!s105 reset_synch_sv_unit
+S1
+R4
+R11
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/reset_synch.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/reset_synch.sv
+L0 1
+R6
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/reset_synch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/reset_synch.sv|
+!i113 0
+R8
+R1
+vSPI_ADC128S
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 ;E62=i88@ghW83DU@9;CK1
+I0XFaTgY`2J>:2P?oaaT050
+!s105 SPI_ADC128S_sv_unit
+S1
+R4
+R11
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/SPI_ADC128S.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/SPI_ADC128S.sv
+L0 1
+R6
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/SPI_ADC128S.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/SPI_ADC128S.sv|
+!i113 0
+R8
+R1
+n@s@p@i_@a@d@c128@s
+vSPI_mstr16
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 =P6A3T^T9dIeQH7_hEI3A3
+I@=G=M8:e1AiamU5?5f0eU1
+!s105 SPI_mstr16_sv_unit
+S1
+R4
+R11
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/SPI_mstr16.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/SPI_mstr16.sv
+L0 2
+R6
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/SPI_mstr16.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/SPI_mstr16.sv|
+!i113 0
+R8
+R1
+n@s@p@i_mstr16
+vUART
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 4@]]aR7i@P]__K29=2K<;3
+I5:mTm1JAhfT4]N<I4hVS`2
+R4
+R11
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/UART.v
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/UART.v
+L0 1
+R6
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/UART.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/UART.v|
+!i113 0
+R10
+R1
+n@u@a@r@t
+vUART_rcv
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 ef8C@z5ghUzITC;1LR7>52
+I7UVHIKCJXc=Q:m`<>h@A_1
+!s105 UART_rcv_sv_unit
+S1
+R4
+R11
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/UART_rcv.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/UART_rcv.sv
+L0 1
+R6
+R9
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/UART_rcv.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/UART_rcv.sv|
+!i113 0
+R8
+R1
+n@u@a@r@t_rcv
+vUART_tx
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 W9gnBS];NUZ5=ib;TDmL_0
+IFUJKNCIk74:6D:=jBFYI?3
+!s105 UART_tx_sv_unit
+S1
+R4
+R11
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/UART_tx.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/UART_tx.sv
+L0 1
+R6
+Z13 !s108 1513209241.000000
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/UART_tx.sv|
+!i113 0
+R8
+R1
+n@u@a@r@t_tx
+vUART_wrapper
+R2
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 Q9QIO?PVV:W?R?CE=lS>B3
+IE2_z5@=T[3IR2_l_[?=7Y0
+!s105 UART_wrapper_sv_unit
+S1
+R4
+w1513200980
+8/userspace/m/mgreer2/ECE551/FinalFinalProject/UART_wrapper.sv
+F/userspace/m/mgreer2/ECE551/FinalFinalProject/UART_wrapper.sv
+L0 1
+R6
+R13
+!s107 /userspace/m/mgreer2/ECE551/FinalFinalProject/UART_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/m/mgreer2/ECE551/FinalFinalProject/UART_wrapper.sv|
+!i113 0
+R8
+R1
+n@u@a@r@t_wrapper

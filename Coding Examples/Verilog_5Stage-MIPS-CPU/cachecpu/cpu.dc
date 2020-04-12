@@ -1,0 +1,90 @@
+
+###################################
+# Read in the verilog files first #
+###################################
+read_file -format verilog { hdl/cpu.v \
+                            hdl/control.v \
+                            hdl/CachePipeline.v \
+                            hdl/hazard.v \
+                            hdl/pc_reg.v \
+                            hdl/flag_reg.v \
+                            hdl/regfile.v \
+                            hdl/stage0reg.v \
+                            hdl/stage1reg.v \
+                            hdl/stage2reg.v \
+                            hdl/stage3reg.v \
+                            hdl/PC_control.v \
+                            hdl/dataHazardUnit.v \
+                            hdl/provided/dff.v \
+                            hdl/alu/alu.v \
+                            hdl/alu/adder.v \
+                            hdl/alu/cla16bit.v \
+                            hdl/alu/cla1bit.v \
+                            hdl/alu/cla4bit.v \
+                            hdl/alu/csa1bit.v \
+                            hdl/alu/fa1bit.v \
+                            hdl/alu/red.v \
+                            hdl/alu/shifter.v }
+
+###################################
+# Set Current Design to top level #
+###################################
+set current_design cpu 
+
+##################
+# set clock port #
+##################
+create_clock -name "clk" -period 100 -waveform {0 50} {clk}
+set_dont_touch_network [find port clk]
+
+
+############################
+# define input clock delay #
+############################
+#set_input_delay -clock clk       0.75 {"start" "A2D_MISO" "mic_sel" "aud_data_hp" "aud_data_mic"}
+#set_input_delay -clock clk      0.75 {}
+
+##############################
+# set input driving strength # 
+##############################
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+set_driving_cell -lib_cell ND2D2BWP -from_pin A1 -library tcbn40lpbwptc $prim_inputs
+set_drive 0 RST_n
+
+################################
+# set output delay constraints # 
+################################
+set_output_delay -clock clk 0.75 [all_outputs]
+set_load 0.1 [all_outputs]
+
+##########################################
+# set wire load model for internal nodes #
+##########################################
+set_wire_load_model -name TSMC32K_Lowk_Conservative -library tcbn40lpbwptc
+set_max_transition 0.15 [current_design]
+
+
+######################
+# Compile the design #
+######################
+compile_ultra
+
+##############################
+# The 2nd compile the design #
+##############################
+ungroup -flatten -all
+set_clock_uncertainty 0.10 clk
+set_fix_hold clk
+compile_ultra
+
+######################
+# Report the results #
+######################
+report_timing -delay max > cpu_max_timing.rpt
+report_timing -delay min > cpu_min_timing.rpt
+report_area > cpu_area.rpt
+
+###################################
+# Set Current Design to top level #
+###################################
+write -format verilog cpu -output cpu.vg
