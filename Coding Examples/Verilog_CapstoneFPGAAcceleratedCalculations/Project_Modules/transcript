@@ -1,17 +1,2 @@
 # Reading C:/Modeltech_pe_edu_10.4a/tcl/vsim/pref.tcl
-# OpenFile {C:/Users/Michael/Desktop/MichaelGreerPortfolio/Coding Examples/Capstone_FPGAAcceleratedCalculations/Project_Modules/Positioning.mpf}
-# Loading project Positioning
-# Error opening C:/userspace/m/mgreer2/Desktop/Project_Modules/doMathTB.sv
-# Path name 'C:/userspace/m/mgreer2/Desktop/Project_Modules/doMathTB.sv' doesn't exist.
-# Error opening C:/userspace/m/mgreer2/Desktop/Project_Modules/doMath.sv
-# Path name 'C:/userspace/m/mgreer2/Desktop/Project_Modules/doMath.sv' doesn't exist.
-# Error opening C:/userspace/m/mgreer2/Desktop/Project_Modules/sqrt32.svh
-# Path name 'C:/userspace/m/mgreer2/Desktop/Project_Modules/sqrt32.svh' doesn't exist.
-# Error opening C:/userspace/m/mgreer2/Desktop/Project_Modules/sqrt32TB.sv
-# Path name 'C:/userspace/m/mgreer2/Desktop/Project_Modules/sqrt32TB.sv' doesn't exist.
-# Error opening C:/userspace/m/mgreer2/Desktop/Project_Modules/testDoMath.sv
-# Path name 'C:/userspace/m/mgreer2/Desktop/Project_Modules/testDoMath.sv' doesn't exist.
-# Error opening C:/userspace/m/mgreer2/Desktop/Project_Modules/xyLocation.sv
-# Path name 'C:/userspace/m/mgreer2/Desktop/Project_Modules/xyLocation.sv' doesn't exist.
-# Error opening C:/userspace/m/mgreer2/Desktop/Project_Modules/xyLocation.sv
-# Path name 'C:/userspace/m/mgreer2/Desktop/Project_Modules/xyLocation.sv' doesn't exist.
+# OpenFile {C:/Users/Michael/Desktop/MichaelGreerPortfolio/Coding Examples/Verilog_CapstoneFPGAAcceleratedCalculations/Project_Modules/doMath.sv}
